@@ -83,9 +83,11 @@ export class Oportunidade{
   //Relacionamento Usuário
 
   @ManyToOne(() => Usuario, (usuario) => usuario.oportunidade,{
-    onDelete: "CASCADE"
+    onDelete: "CASCADE",
+    nullable: true
   } )
   usuario: Usuario;
+
 
 }
 

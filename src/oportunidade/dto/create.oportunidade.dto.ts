@@ -2,6 +2,7 @@ import { IsEnum, IsNotEmpty, IsOptional, IsString, IsNumber } from 'class-valida
 import { NivelExperiencia } from '../enums/nivel-experiencia.enum';
 import { ModalidadeTrabalho } from '../enums/modalidade.enum';
 import { TipoContrato } from '../enums/contrato.enum';
+import { Status } from '../enums/status.enun';
 
 export class CreateOportunidadeDto {
 
@@ -22,6 +23,9 @@ export class CreateOportunidadeDto {
 
   @IsEnum(NivelExperiencia)
   nivelExperiencia: NivelExperiencia;
+
+  @IsEnum(Status)
+  status: Status;
 
   @IsEnum(ModalidadeTrabalho)
   modalidade: ModalidadeTrabalho;

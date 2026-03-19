@@ -39,7 +39,7 @@ async findById(id: number): Promise<Candidata>{
 //Procurar por Nome
 async findByNome(nome: string): Promise<Candidata[]>{
     return await this.candidataRepository.find({
-        where:{ nome: ILike(`%${nome}`)}
+        where:{ nome: ILike(`%${nome}%`)}
     })
 }
 

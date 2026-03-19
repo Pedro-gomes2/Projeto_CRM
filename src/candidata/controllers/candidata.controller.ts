@@ -5,9 +5,11 @@ import { CreateCandidataDto } from "../dto/create-candidata.dto";
 import { NivelExperiencia } from "../enum/nivel-expeciencia.enum";
 import { Disponibilidade } from "../enum/disponibilidade.enum";
 import { JwtAuthGuard } from "../../auth/guard/jwt-auth.guard";
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 
-
+@ApiTags('Candidata')
 @Controller("/candidatas")
+@ApiBearerAuth()
 export class CandidataController {
 
   constructor(private readonly candidataService: CandidataService) {}

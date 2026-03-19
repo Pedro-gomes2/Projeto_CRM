@@ -6,6 +6,7 @@ import { CreateOportunidadeDto } from "../dto/create.oportunidade.dto";
 import { NivelExperiencia } from "../enums/nivel-experiencia.enum";
 import { TipoContrato } from "../enums/contrato.enum";
 import { ModalidadeTrabalho } from "../enums/modalidade.enum";
+import { Status } from "../enums/status.enun";
 
 //O recomendado em tese seria criar um Many to Many entre candidata e oportunidade
 //criando assim uma nova tabela candidatura, porem isso iria fugir do escorpo
@@ -56,6 +57,16 @@ export class OportunidadeService{
     async findByModalidade(modalidade: ModalidadeTrabalho): Promise<Oportunidade[]> {
     return await this.oportunidadeRepository.find({
       where: {modalidade},
+       relations: ["usuario"]
+    });
+    }
+
+
+  //Procurar por Status
+    //Procurar por Modalidade  
+    async findByStatus(status: Status): Promise<Oportunidade[]> {
+    return await this.oportunidadeRepository.find({
+      where: {status},
        relations: ["usuario"]
     });
     }

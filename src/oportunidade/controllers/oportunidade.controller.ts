@@ -5,11 +5,13 @@ import { ModalidadeTrabalho } from "../enums/modalidade.enum";
 import { CreateOportunidadeDto } from "../dto/create.oportunidade.dto";
 import { NivelExperiencia } from "../enums/nivel-experiencia.enum";
 import { JwtAuthGuard } from "../../auth/guard/jwt-auth.guard";
+import { Status } from "../enums/status.enun";
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 
-
+@ApiTags('Oportunidade')
 @UseGuards(JwtAuthGuard)
 @Controller('/oportunidades')
-
+@ApiBearerAuth()
 export class OportunidadeController{
     constructor( private readonly oportunidadeService: OportunidadeService){}
 
@@ -42,6 +44,17 @@ export class OportunidadeController{
   findByLocalizacao(@Param('localizacao') localizacao: string) {
     return this.oportunidadeService.findByLocalizacao(localizacao);
   }
+
+  // Buscar por Status
+  @Get('/status/:status')
+  findByStatus(@Param('status') status: Status) {
+    return this.oportunidadeService.findByStatus(status);
+  }
+
+
+
+
+
 
   // Buscar por tipo de contrato
   @Get('/contrato/:tipoContrato')

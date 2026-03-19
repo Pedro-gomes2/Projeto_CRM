@@ -19,10 +19,10 @@ export class CreateOportunidadeDto {
   descricao: string;
 
   @IsString()
-  tipoContrato: TipoContrato;
+  tipoContrato: string;
 
   @IsString()
-  nivelExperiencia: NivelExperiencia;
+  nivelExperiencia: string;
 
   @IsString()
   status: Status;

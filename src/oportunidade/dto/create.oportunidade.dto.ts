@@ -28,7 +28,7 @@ export class CreateOportunidadeDto {
   status: Status;
 
   @IsString()
-  modalidade: ModalidadeTrabalho;
+  modalidade: string;
 
   @IsOptional()
   @IsNumber()

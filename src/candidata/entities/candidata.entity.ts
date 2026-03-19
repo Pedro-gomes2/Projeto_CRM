@@ -76,7 +76,7 @@ export class Candidata{
   type: 'varchar'
   })
   @ApiProperty()
-  disponibilidade: Disponibilidade;
+  disponibilidade:string;
 
 
   //Data de Criação

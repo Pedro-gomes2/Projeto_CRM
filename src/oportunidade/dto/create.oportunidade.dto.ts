@@ -18,16 +18,16 @@ export class CreateOportunidadeDto {
   @IsString()
   descricao: string;
 
-  @IsEnum(TipoContrato)
+  @IsString()
   tipoContrato: TipoContrato;
 
-  @IsEnum(NivelExperiencia)
+  @IsString()
   nivelExperiencia: NivelExperiencia;
 
-  @IsEnum(Status)
+  @IsString()
   status: Status;
 
-  @IsEnum(ModalidadeTrabalho)
+  @IsString()
   modalidade: ModalidadeTrabalho;
 
   @IsOptional()

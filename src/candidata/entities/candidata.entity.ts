@@ -59,8 +59,7 @@ export class Candidata{
 
   //Nivel de Experiencia
   @Column({
-    type: "enum",
-    enum: NivelExperiencia
+  type: 'varchar'
   })
   @ApiProperty()
   nivel_experiencia: NivelExperiencia;
@@ -74,8 +73,7 @@ export class Candidata{
 
   //Disponibilidade
   @Column({
-    type: "enum",
-    enum: Disponibilidade
+  type: 'varchar'
   })
   @ApiProperty()
   disponibilidade: Disponibilidade;

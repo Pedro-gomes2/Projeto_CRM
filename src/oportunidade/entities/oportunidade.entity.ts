@@ -38,17 +38,12 @@ export class Oportunidade{
   descricao: string;
 
   //Modalidade de trabalho
-  @Column({ type: 'enum',
-    enum : TipoContrato
-   })
+  @Column({ type: 'varchar', })
   @ApiProperty() 
   tipoContrato: TipoContrato; 
   // CLT | PJ | Freelancer | Estágio
 
-  @Column({
-  type: 'enum',
-  enum: ModalidadeTrabalho
-  })
+  @Column({ type: 'varchar', })
   @ApiProperty() 
   modalidade: ModalidadeTrabalho;
   // Presencial | Híbrido | Remoto
@@ -65,10 +60,7 @@ export class Oportunidade{
 
 
   //Nivel de EXPERIENCIA
-  @Column({
-  type: 'enum',
-  enum: NivelExperiencia
-  })
+  @Column({ type: 'varchar', })
   @ApiProperty() 
   nivelExperiencia: NivelExperiencia;
   // Junior | Pleno | Senior
@@ -76,10 +68,7 @@ export class Oportunidade{
 
   //STATUS
   //Nivel de EXPERIENCIA
-  @Column({
-  type: 'enum',
-  enum: Status
-  })
+ @Column({ type: 'varchar', })
   @ApiProperty() 
   status: Status;
   // ABERTA | FECHADA | PERDIDA

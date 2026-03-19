@@ -29,7 +29,7 @@ export class CreateCandidataDto {
   @IsString()
   area_profissional: string;
 
-  @IsEnum(NivelExperiencia)
+  @IsString()
   nivel_experiencia: NivelExperiencia;
 
   @IsOptional()
@@ -44,7 +44,7 @@ export class CreateCandidataDto {
   @IsUrl()
   portfolio?: string;
 
-  @IsEnum(Disponibilidade)
+  @IsString()
   disponibilidade: Disponibilidade;
 
 }

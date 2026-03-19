@@ -9,6 +9,7 @@ import { CandidataModule } from './candidata/candidata.module';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 import { ProdService } from './data/prod.service';
+import { DevService } from './data/dev.service';
 
 @Module({
   imports: [

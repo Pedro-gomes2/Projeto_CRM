@@ -62,7 +62,7 @@ export class Candidata{
   type: 'varchar'
   })
   @ApiProperty()
-  nivel_experiencia: NivelExperiencia;
+  nivel_experiencia: string;
 
 
   // Pretensão Salarial
